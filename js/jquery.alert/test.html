@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no"/>
+
+
+</head>
+<body style="font-size: 14px !important;">
+
+<div id="alert1">底部提示框</div>
+<div id="alert2">遮罩层提示框</div>
+<div id="alert3">遮罩层确定框</div>
+
+
+
+
+<script src="../jquery.min.js"></script>
+<script src="jqAlert.js"></script>
+<script>
+    //底部提示框
+    $('#alert1').click(function () {
+        //第一个参数是提示信息
+        //第二个(可选)参数是显示的时间，默认2000
+        jqAlert.Layer('我是底部提示框',2000)
+    });
+
+    //遮罩层提示框
+    $('#alert2').click(function () {
+        //第一个参数是提示信息
+        //第二个(可选)参数是显示的时间，自动关闭，不填则会一直显示，点击确定关闭，
+        jqAlert.Confirm('我是遮罩层提示框',2000)
+    });
+
+    //遮罩层确定框
+    $('#alert3').click(function (e) {
+        //第一个参数是提示信息
+        //第二个参数是点击确定的回调函数，如果需要操作数据，必须传参数event
+        //第三个参数是获取当前事件的，不传获取不到节点
+        jqAlert.Confirm('确定删除吗？',function (event) {
+            console.log($(event).attr('id'));
+            console.log(event.id);
+            console.log(e.target.id);
+        },e);
+    })
+
+</script>
+</body>
+</html>

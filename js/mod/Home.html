@@ -1,0 +1,242 @@
+<style>
+	.Adv_div {
+		width: calc(100% - 0.2em);
+		height: 200px;
+		max-height: 200px;
+		overflow: hidden;
+		margin-left: 0.2em;
+		margin-right: 0.2em;
+	}
+
+	.Categories_Main {
+		margin-top: 0.2em;
+		width: calc(100% - 0.2em);
+		margin-left: 0.2em;
+		height:2.9em;
+		overflow: hidden;
+	}
+	.Categories_Name {
+		font-size: 0.8em;
+		font-weight: bolder;
+		margin-right: 0.2em;
+		margin-left:0.2em;
+		border-bottom: 1px solid #EEEEEE;
+		height: 1.5em;
+		line-height: 1em;
+		color: #333;
+	}
+	.Categories_List {
+		text-align: center;
+		display: inline-flex;
+		width: calc(100% - 1em);
+		overflow: hidden;
+		overflow-x: auto;
+		height: 3em;
+	}
+
+	.Categories_List_Item {
+		width: 5em;
+		height: 2em;
+		line-height: 2em;
+		display: inline-flex;
+		text-align: center;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+	.Categories_List_Item_title{
+		margin-top: 0.3em;
+		font-size: 0.7em;
+		font-weight: 10;
+		width: 8em;
+		text-align: center;
+		color: #333;
+	}
+	.AppICO_Main {
+		margin-top: 0.8em;
+		width: calc(100% - 0.2em);
+		margin-left: 0.4em;
+		/*height: calc(100% - 12.5em);*/
+		/*height: calc(100% - 20.5em);*/
+	}
+
+	.AppICO_Name {
+		font-size: 0.8em;
+		font-weight: bolder;
+		margin-top: 0.3cm;
+		margin-right: 0.2em;
+		margin-left: 0.4em;
+		border-bottom: 1px solid #EEEEEE;
+		height: 1.5em;
+		line-height: 1em;
+		color: #333;
+	}
+
+	.AppICO_List {
+		overflow: hidden;
+		overflow-y: auto;
+		/*height: calc(100% - 1em);*/
+	}
+
+	.AppICO_List_Item {
+		width: calc(50% - 0.8em);
+		height: auto;
+		margin: 0.2em;
+		display: inline-flex;
+		cursor: pointer;
+		margin-top: 0.3em;
+		border-top: 1px solid #eee;
+		border-left: 1px solid #eee;
+		box-shadow: 1px 1px 1px 1px #eee;
+		border-radius:5px;
+	}
+
+	.AppICO_List_Item_img {
+		width: 100%;
+		height: auto;
+		list-style-type: none;
+		border-bottom: 1px solid #eee;
+	}
+
+	.AppICO_List_Item_div {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		list-style-type: none;
+	}
+
+	.AppICO_List_Item_title {
+		width: calc(100% - 1em);
+		/*margin-top: -1em;*/
+		margin-left:0.7em;
+		line-height: 1em;
+		text-align: left;
+		height: 1em;
+		font-size: 0.8em;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		color: #333;
+	}
+
+	.AppICO_List_Item_memo {
+		width: calc(100% - 2em);
+		margin: 1em;
+		margin-bottom: 0.1em;
+		font-size:0.6em;
+		font-weight: 100;
+		height: 3.9em;
+		word-break: break-all;
+		text-align: left;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-webkit-line-clamp: 3;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		color: #333;
+	}
+	.AppICO_List_Item_clicknum{
+		font-size:0.6em;
+		font-weight: 100;
+		margin-left:1em;
+		display: inline-flex;
+		color: #333;
+		text-align: left;
+		width:100%;
+		margin-bottom: 1em;
+		}
+	.app_coin_click{
+		/*width: 10em;*/
+		}
+	#AppClickNumber{
+		text-align: left;
+		float: left;
+		width: calc(100% - 7em);
+		}
+	.hLine{
+		height:1px;
+		width: 100%;
+		}
+	.CtypeName{
+		color: red;
+		}
+	.CtypeNum{
+		color:blue;
+		}
+	.Favorites{
+		width:1.2em;
+		height: 1.2em;
+		}
+@media only screen and (min-width: 1366px) and (max-width: 1599px) {
+	.AppICO_List_Item {
+		width: calc(25% - 0.8em);
+	}
+}
+@media only screen and (min-width: 1600px) and (max-width: 9640px) {
+	.AppICO_List_Item {
+		width: calc(15% - 0.8em);
+	}
+}
+@media only screen and (min-width: 800px) and (max-width: 1365px) {
+	.AppICO_List_Item {
+		width: calc(13% - 0.8em);
+	}
+}
+.List_Content{
+	width: 100%;
+	margin:0px;
+	padding:0px;
+	height: calc(100% - 8em);
+	overflow:hidden;
+	overflow-y: auto;
+	}
+</style>
+
+<div class="Categories_Main">
+	<div class="Categories_Name" data-locale="CategoriesName"></div>
+	<div id="Categories_List" class="Categories_List">
+		<div class="Categories_List_Item">
+			<div class="Categories_List_Item_title" data-locale="CLITAll"></div>
+		</div>
+		<div class="Categories_List_Item">
+			<div class="Categories_List_Item_title" data-locale="CLITOfficial"></div>
+		</div>
+		<div class="Categories_List_Item">
+			<div class="Categories_List_Item_title" data-locale="CLITTest"></div>
+		</div>
+		<div class="Categories_List_Item">
+			<div class="Categories_List_Item_title" data-locale="CLITShop"></div>
+		</div>
+		<div class="Categories_List_Item">
+			<div class="Categories_List_Item_title" data-locale="CLITBBS"></div>
+		</div>
+		<div class="Categories_List_Item">
+			<div class="Categories_List_Item_title" data-locale="CLITGame"></div>
+		</div>
+		<div class="Categories_List_Item">
+			<div class="Categories_List_Item_title" data-locale="CLITNFT"></div>
+		</div>
+		<div class="Categories_List_Item">
+			<div class="Categories_List_Item_title" data-locale="CLITNew"></div>
+		</div>
+		<div class="Categories_List_Item">
+			<div class="Categories_List_Item_title" data-locale="CLITWorker"></div>
+		</div>
+		<div class="Categories_List_Item">
+			<div class="Categories_List_Item_title" data-locale="CLITOTHER"></div>
+		</div>
+	</div>
+</div>
+<div class="AppICO_Name"><span data-locale="AppICOName"></span></div>
+<div class="List_Content">
+<div class="Adv_div"></div>
+<div class="AppICO_Main">
+
+	<div class="AppICO_List">
+
+
+	</div>
+</div>
+</div>
