@@ -5,10 +5,15 @@ function errorfnc() {
 }
 
 //连接数据库方式1
-define("P_HOSTNAME","localhost");
+//define("P_HOSTNAME","localhost");
+//define("P_USER","root");
+//define("P_PASSWORD","wolfmsdn");
+//define("P_DATABASENAME","pi_app_list");
+define("P_HOSTNAME","caf08d9e0e77.c.methodot.com:33428");
 define("P_USER","root");
 define("P_PASSWORD","wolfmsdn");
 define("P_DATABASENAME","pi_app_list");
+
 $conn = new mysqli(P_HOSTNAME, P_USER, P_PASSWORD, P_DATABASENAME);
 $conn -> query("SET NAMES utf8");
 
